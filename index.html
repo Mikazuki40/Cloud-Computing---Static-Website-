@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,73 +11,975 @@
 
 <body>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
+    <!-- =========================
+         MOBILE MENU BUTTON
+    ========================== -->
+    <button class="mobile-menu-button" id="mobileMenuButton">
+        ☰
+    </button>
 
-        <div class="logo">
-            <h1>LOBOTOMY</h1>
-            <h2>CORPORATION</h2>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="list/Lobotomy_Corporation.jpg"
+                 alt="Lobotomy Corporation Logo">
+
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#abnormalities">Abnormalities</a>
-            <a href="#about">About</a>
-            <a href="#angela">Angela</a>
+        <div class="facility-name">
+            <h1>LOBOTOMY</h1>
+            <h1>CORPORATION</h1>
+
+            <p>FACILITY DATABASE</p>
+        </div>
+
+        <div class="system-status">
+            <span class="status-light"></span>
+            SYSTEM ONLINE
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <button class="nav-button active" data-section="home">
+                <span>01</span>
+                HOME
+            </button>
+
+            <button class="nav-button" data-section="archive">
+                <span>02</span>
+                ABNORMALITIES
+            </button>
+
+            <button class="nav-button" data-section="information">
+                <span>03</span>
+                ARCHIVE INFO
+            </button>
+
+            <button class="nav-button" data-section="angela">
+                <span>04</span>
+                ANGELA
+            </button>
+
         </nav>
 
-        <div class="sidebar-bottom">
-            <p>FACILITY STATUS</p>
-            <span class="status-online">● ONLINE</span>
+
+        <div class="security-box">
+
+            <p>SECURITY LEVEL</p>
+
+            <strong>AUTHORIZED</strong>
+
+            <div class="security-bar">
+                <div></div>
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-quote">
+            "Face the Fear.<br>
+            Build the Future."
         </div>
 
     </aside>
 
 
-    <!-- Main Content -->
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
     <main class="main-content">
 
-        <!-- HOME -->
-        <section id="home" class="page-section">
 
-            <div class="header">
-                <p>LOBOTOMY CORPORATION DATABASE</p>
-                <h1>ABNORMALITY ARCHIVE</h1>
+        <!-- TOP BAR -->
+        <header class="top-bar">
+
+            <div>
+                LC // DATABASE // <span id="currentSection">HOME</span>
             </div>
 
-            <div class="warning-box">
+            <div class="terminal">
+                TERMINAL 01
+            </div>
 
-                <h2>⚠ WARNING</h2>
+        </header>
 
-                <p>
-                    This database contains classified information
-                    regarding Abnormalities contained within the facility.
-                </p>
 
-                <p>
-                    Unauthorized access to classified information
-                    may result in disciplinary action.
-                </p>
+
+        <!-- =========================
+             HOME SECTION
+        ========================== -->
+        <section id="home" class="page-section active-section">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <p class="classification">
+                        LOBOTOMY CORPORATION // INTERNAL USE
+                    </p>
+
+                    <h2>
+                        ABNORMALITY
+                        <span>ARCHIVE</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        A digital archive containing classified information
+                        regarding abnormal entities encountered within the facility.
+                    </p>
+
+                    <button class="primary-button" onclick="openArchive()">
+                        ACCESS DATABASE
+                    </button>
+
+                </div>
+
+                <div class="hero-symbol">
+                    LC
+                </div>
 
             </div>
 
 
-            <div class="welcome">
 
-                <h2>Welcome, Manager.</h2>
+            <!-- Dashboard -->
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>ABNORMALITIES</h3>
+
+                    <p>
+                        Classified records of entities currently stored
+                        in the facility archive.
+                    </p>
+
+                    <strong id="abnormalityCount">
+                        5
+                    </strong>
+
+                    <span>
+                        ARCHIVED RECORDS
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>DATABASE</h3>
+
+                    <p>
+                        Review information regarding classification,
+                        risk level, and facility observations.
+                    </p>
+
+                    <strong>
+                        ACTIVE
+                    </strong>
+
+                    <span>
+                        DATABASE STATUS
+                    </span>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>ACCESS</h3>
+
+                    <p>
+                        Current terminal authorization level
+                        for this archive.
+                    </p>
+
+                    <strong>
+                        L-01
+                    </strong>
+
+                    <span>
+                        ACCESS LEVEL
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Warning -->
+            <div class="warning-panel">
+
+                <div class="warning-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h3>
+                        CLASSIFIED INFORMATION
+                    </h3>
+
+                    <p>
+                        The information contained within this database
+                        is intended for authorized personnel only.
+                        Unauthorized access may result in disciplinary action.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Show/Hide Feature -->
+            <div class="classified-area">
+
+                <button class="secondary-button"
+                        id="classifiedButton">
+
+                    SHOW CLASSIFIED NOTICE
+
+                </button>
+
+                <div id="classifiedMessage"
+                     class="hidden-message">
+
+                    <p>
+                        NOTICE: Abnormality information should be handled
+                        according to facility security procedures.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABNORMALITY ARCHIVE
+        ========================== -->
+        <section id="archive" class="page-section">
+
+            <div class="section-heading">
 
                 <p>
-                    This archive contains information regarding
-                    Abnormalities encountered by Lobotomy Corporation.
+                    DATABASE // RECORDS
                 </p>
+
+                <h2>
+                    ABNORMALITY ARCHIVE
+                </h2>
+
+                <span>
+                    SELECT A RECORD TO REVIEW AVAILABLE INFORMATION
+                </span>
+
+            </div>
+
+
+
+            <!-- Search and Filter -->
+            <div class="archive-controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search abnormality..."
+                >
+
+                <select id="riskFilter">
+
+                    <option value="all">
+                        ALL RISK LEVELS
+                    </option>
+
+                    <option value="ZAYIN">
+                        ZAYIN
+                    </option>
+
+                    <option value="TETH">
+                        TETH
+                    </option>
+
+                    <option value="HE">
+                        HE
+                    </option>
+
+                    <option value="WAW">
+                        WAW
+                    </option>
+
+                    <option value="ALEPH">
+                        ALEPH
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Abnormality Cards -->
+            <div class="abnormality-grid"
+                 id="abnormalityGrid">
+
+
+                <!-- One Sin -->
+                <article class="abnormality-card"
+                         data-name="One Sin and Hundreds of Good Deeds"
+                         data-risk="ZAYIN">
+
+                    <div class="abnormality-image">
+
+                        <img src="list/OneSinArtFull.png"
+                             alt="One Sin placeholder">
+
+                        <span class="risk-badge zayin">
+                            ZAYIN
+                        </span>
+
+                    </div>
+
+                    <div class="abnormality-content">
+
+                        <p class="record-code">
+                            O-03-03
+                        </p>
+
+                        <h3>
+                            One Sin and Hundreds of Good Deeds
+                        </h3>
+
+                        <p>
+                            A classified abnormality record maintained
+                            within the facility database.
+                        </p>
+
+                        <button
+                            class="details-button"
+                            onclick="showDetails(
+                            'One Sin and Hundreds of Good Deeds',
+                            'O-03-03',
+                            'ZAYIN',
+                            'A symbolic abnormality record used for the archive demonstration.'
+                            )">
+
+                            VIEW RECORD
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Fairy Festival -->
+                <article class="abnormality-card"
+                         data-name="Fairy Festival"
+                         data-risk="TETH">
+
+                    <div class="abnormality-image">
+
+                        <img src="list/fariy festival.webp"
+                             alt="Fairy Festival placeholder">
+
+                        <span class="risk-badge teth">
+                            TETH
+                        </span>
+
+                    </div>
+
+                    <div class="abnormality-content">
+
+                        <p class="record-code">
+                            F-04-83
+                        </p>
+
+                        <h3>
+                            Fairy Festival
+                        </h3>
+
+                        <p>
+                            A classified entity record stored
+                            within the abnormality archive.
+                        </p>
+
+                        <button
+                            class="details-button"
+                            onclick="showDetails(
+                            'Fairy Festival',
+                            'F-04-83',
+                            'TETH',
+                            'A sample archive record demonstrating database interaction.'
+                            )">
+
+                            VIEW RECORD
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Old Lady -->
+                <article class="abnormality-card"
+                         data-name="Old Lady"
+                         data-risk="TETH">
+
+                    <div class="abnormality-image">
+
+                        <img src="list/Old_lady.JPG.webp"
+                             alt="Old Lady placeholder">
+
+                        <span class="risk-badge teth">
+                            TETH
+                        </span>
+
+                    </div>
+
+                    <div class="abnormality-content">
+
+                        <p class="record-code">
+                            O-01-12
+                        </p>
+
+                        <h3>
+                            Old Lady
+                        </h3>
+
+                        <p>
+                            A sample classified record used to
+                            demonstrate the archive interface.
+                        </p>
+
+                        <button
+                            class="details-button"
+                            onclick="showDetails(
+                            'Old Lady',
+                            'O-01-12',
+                            'TETH',
+                            'A sample record for the static website demonstration.'
+                            )">
+
+                            VIEW RECORD
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Forsaken Murderer -->
+                <article class="abnormality-card"
+                         data-name="Forsaken Murderer"
+                         data-risk="TETH">
+
+                    <div class="abnormality-image">
+
+                        <img src="list/Abbandoned_Mur.webp"
+                             alt="Forsaken Murderer placeholder">
+
+                        <span class="risk-badge teth">
+                            TETH
+                        </span>
+
+                    </div>
+
+                    <div class="abnormality-content">
+
+                        <p class="record-code">
+                            T-01-54
+                        </p>
+
+                        <h3>
+                            Forsaken Murderer
+                        </h3>
+
+                        <p>
+                            A classified abnormality record
+                            contained within the facility archive.
+                        </p>
+
+                        <button
+                            class="details-button"
+                            onclick="showDetails(
+                            'Forsaken Murderer',
+                            'T-01-54',
+                            'TETH',
+                            'A sample abnormality entry for the website demonstration.'
+                            )">
+
+                            VIEW RECORD
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Mountain -->
+                <article class="abnormality-card"
+                         data-name="The Mountain of Smiling Bodies"
+                         data-risk="WAW">
+
+                    <div class="abnormality-image">
+
+                        <img src="list/mountainofsmilingbodies.jpg"
+                             alt="Mountain of Smiling Bodies placeholder">
+
+                        <span class="risk-badge waw">
+                            WAW
+                        </span>
+
+                    </div>
+
+                    <div class="abnormality-content">
+
+                        <p class="record-code">
+                            O-04-102
+                        </p>
+
+                        <h3>
+                            The Mountain of Smiling Bodies
+                        </h3>
+
+                        <p>
+                            A high-risk archive record included
+                            for demonstration purposes.
+                        </p>
+
+                        <button
+                            class="details-button"
+                            onclick="showDetails(
+                            'The Mountain of Smiling Bodies',
+                            'O-04-102',
+                            'WAW',
+                            'A sample high-risk record demonstrating interactive archive cards.'
+                            )">
+
+                            VIEW RECORD
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- No Results -->
+            <div id="noResults" class="no-results">
+
+                NO MATCHING RECORDS FOUND.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INFORMATION SECTION
+        ========================== -->
+        <section id="information" class="page-section">
+
+            <div class="section-heading">
 
                 <p>
-                    Select an Abnormality from the archive to
-                    inspect its recorded information.
+                    DATABASE // INFORMATION
                 </p>
 
-                <button onclick="showSection('abnormalities')">
-                    OPEN ARCHIVE
+                <h2>
+                    ARCHIVE INFORMATION
+                </h2>
+
+                <span>
+                    SYSTEM DOCUMENTATION
+                </span>
+
+            </div>
+
+
+            <div class="information-grid">
+
+                <div class="information-panel">
+
+                    <h3>
+                        PURPOSE OF THE WEBSITE
+                    </h3>
+
+                    <p>
+                        The Abnormality Archive is a static website
+                        created as an educational demonstration of
+                        HTML, CSS, JavaScript, GitHub, and GitHub Pages.
+                    </p>
+
+                    <p>
+                        The website presents fictional archive-style
+                        information using a database interface inspired
+                        by a dark corporate facility system.
+                    </p>
+
+                </div>
+
+
+                <div class="information-panel">
+
+                    <h3>
+                        TARGET AUDIENCE
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Students
+                        </li>
+
+                        <li>
+                            Game and media enthusiasts
+                        </li>
+
+                        <li>
+                            Web development learners
+                        </li>
+
+                        <li>
+                            Visitors interested in fictional archives
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="information-panel">
+
+                    <h3>
+                        WEBSITE TECHNOLOGIES
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            HTML5
+                        </li>
+
+                        <li>
+                            CSS3
+                        </li>
+
+                        <li>
+                            JavaScript
+                        </li>
+
+                        <li>
+                            GitHub
+                        </li>
+
+                        <li>
+                            GitHub Pages
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="information-panel">
+
+                    <h3>
+                        JAVASCRIPT FEATURES
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Live digital clock
+                        </li>
+
+                        <li>
+                            Countdown timer
+                        </li>
+
+                        <li>
+                            Interactive navigation
+                        </li>
+
+                        <li>
+                            Search and filtering
+                        </li>
+
+                        <li>
+                            Theme switching
+                        </li>
+
+                        <li>
+                            Random messages
+                        </li>
+
+                        <li>
+                            Interactive archive records
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Countdown -->
+            <div class="countdown-panel">
+
+                <div>
+
+                    <p class="classification">
+                        FACILITY EVENT
+                    </p>
+
+                    <h3>
+                        NEXT SYSTEM REVIEW
+                    </h3>
+
+                    <p>
+                        Countdown to the next scheduled archive review.
+                    </p>
+
+                </div>
+
+
+                <div class="countdown">
+
+                    <div class="time-box">
+
+                        <strong id="days">
+                            00
+                        </strong>
+
+                        <span>
+                            DAYS
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="hours">
+                            00
+                        </strong>
+
+                        <span>
+                            HOURS
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="minutes">
+                            00
+                        </strong>
+
+                        <span>
+                            MINUTES
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="seconds">
+                            00
+                        </strong>
+
+                        <span>
+                            SECONDS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- External Link -->
+            <div class="external-resource">
+
+                <h3>
+                    EXTERNAL RESOURCE
+                </h3>
+
+                <p>
+                    Visit the official GitHub website to learn more
+                    about repositories and GitHub Pages.
+                </p>
+
+                <a href="https://github.com"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    OPEN GITHUB
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ANGELA SECTION
+        ========================== -->
+        <section id="angela" class="page-section">
+
+            <div class="section-heading">
+
+                <p>
+                    SYSTEM // AI ASSISTANT
+                </p>
+
+                <h2>
+                    ANGELA
+                </h2>
+
+                <span>
+                    FACILITY ASSISTANCE TERMINAL
+                </span>
+
+            </div>
+
+
+            <div class="angela-container">
+
+                <div class="angela-profile">
+
+                    <div class="angela-avatar">
+                        A
+                    </div>
+
+                    <h3>
+                        ANGELA
+                    </h3>
+
+                    <p>
+                        CENTRAL AI ASSISTANT
+                    </p>
+
+                    <div class="ai-status">
+
+                        <span></span>
+
+                        ONLINE
+
+                    </div>
+
+                </div>
+
+
+                <div class="chat-window">
+
+                    <div class="chat-header">
+
+                        ANGELA // TERMINAL ASSISTANCE
+
+                    </div>
+
+
+                    <div class="chat-messages"
+                         id="chatMessages">
+
+                        <div class="message angela-message">
+
+                            <strong>ANGELA:</strong>
+
+                            <p>
+                                Welcome to the facility archive.
+                                How may I assist you?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-input">
+
+                        <input
+                            type="text"
+                            id="angelaInput"
+                            placeholder="Enter a message..."
+                            onkeydown="handleEnter(event)"
+                        >
+
+                        <button onclick="sendMessage()">
+
+                            SEND
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Random Message -->
+            <div class="random-message-area">
+
+                <h3>
+                    RANDOM FACILITY MESSAGE
+                </h3>
+
+                <p id="randomMessage">
+                    Click the button to receive a system message.
+                </p>
+
+                <button
+                    class="primary-button"
+                    onclick="generateRandomMessage()">
+
+                    GENERATE MESSAGE
+
                 </button>
 
             </div>
@@ -86,316 +987,96 @@
         </section>
 
 
-        <!-- ABNORMALITY LIST -->
-        <section id="abnormalities" class="page-section hidden">
 
-            <div class="header">
+        <!-- =========================
+             FOOTER
+        ========================== -->
+        <footer class="footer">
 
-                <p>DATABASE / ARCHIVE</p>
+            <div>
 
-                <h1>ABNORMALITY LIST</h1>
-
-            </div>
-
-
-            <!-- Search -->
-            <div class="search-container">
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search Abnormalities..."
-                    onkeyup="searchAbnormalities()"
-                >
+                LOBOTOMY CORPORATION // FACILITY DATABASE
 
             </div>
 
+            <div id="liveClock">
 
-            <!-- Abnormality Cards -->
-            <div class="abnormality-grid" id="abnormalityList">
-
-
-                <!-- One Sin -->
-                <div
-                    class="abnormality-card"
-                    data-name="one sin and hundreds of good deeds"
-                >
-
-                    <img
-                        src="images/one-sin.jpg"
-                        alt="One Sin and Hundreds of Good Deeds"
-                    >
-
-                    <div class="card-content">
-
-                        <span class="risk zayin">
-                            ZAYIN
-                        </span>
-
-                        <h2>
-                            One Sin and Hundreds of Good Deeds
-                        </h2>
-
-                        <p>
-                            O-03-03
-                        </p>
-
-                        <a href="abnormalities/one-sin.html">
-                            VIEW RECORD
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Fairy Festival -->
-                <div
-                    class="abnormality-card"
-                    data-name="fairy festival"
-                >
-
-                    <img
-                        src="images/fairy-festival.jpg"
-                        alt="Fairy Festival"
-                    >
-
-                    <div class="card-content">
-
-                        <span class="risk teth">
-                            TETH
-                        </span>
-
-                        <h2>
-                            Fairy Festival
-                        </h2>
-
-                        <p>
-                            F-04-83
-                        </p>
-
-                        <a href="abnormalities/fairy-festival.html">
-                            VIEW RECORD
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Old Lady -->
-                <div
-                    class="abnormality-card"
-                    data-name="old lady"
-                >
-
-                    <img
-                        src="images/old-lady.jpg"
-                        alt="Old Lady"
-                    >
-
-                    <div class="card-content">
-
-                        <span class="risk teth">
-                            TETH
-                        </span>
-
-                        <h2>
-                            Old Lady
-                        </h2>
-
-                        <p>
-                            O-01-12
-                        </p>
-
-                        <a href="abnormalities/old-lady.html">
-                            VIEW RECORD
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Forsaken Murderer -->
-                <div
-                    class="abnormality-card"
-                    data-name="forsaken murderer"
-                >
-
-                    <img
-                        src="images/forsaken-murderer.jpg"
-                        alt="Forsaken Murderer"
-                    >
-
-                    <div class="card-content">
-
-                        <span class="risk teth">
-                            TETH
-                        </span>
-
-                        <h2>
-                            Forsaken Murderer
-                        </h2>
-
-                        <p>
-                            T-01-54
-                        </p>
-
-                        <a href="abnormalities/forsaken-murderer.html">
-                            VIEW RECORD
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Mountain -->
-                <div
-                    class="abnormality-card"
-                    data-name="mountain of smiling bodies"
-                >
-
-                    <img
-                        src="images/mountain-corps.jpg"
-                        alt="The Mountain of Smiling Bodies"
-                    >
-
-                    <div class="card-content">
-
-                        <span class="risk waw">
-                            WAW
-                        </span>
-
-                        <h2>
-                            The Mountain of Smiling Bodies
-                        </h2>
-
-                        <p>
-                            O-04-102
-                        </p>
-
-                        <a href="abnormalities/mountain-corps.html">
-                            VIEW RECORD
-                        </a>
-
-                    </div>
-
-                </div>
-
+                CURRENT TIME: 00:00:00
 
             </div>
 
-        </section>
+            <div>
 
-
-        <!-- ABOUT -->
-        <section id="about" class="page-section hidden">
-
-            <div class="header">
-
-                <p>DATABASE / INFORMATION</p>
-
-                <h1>ABOUT THE ARCHIVE</h1>
+                STATIC WEBSITE PROJECT
 
             </div>
 
-            <div class="information-box">
-
-                <h2>Abnormality Archive</h2>
-
-                <p>
-                    The Abnormality Archive is a fan-made website
-                    inspired by Lobotomy Corporation.
-                </p>
-
-                <p>
-                    Its purpose is to organize information about
-                    Abnormalities into an accessible digital archive.
-                </p>
-
-                <h2>Archive Information</h2>
-
-                <ul>
-                    <li>Abnormality identification numbers</li>
-                    <li>Risk levels</li>
-                    <li>Basic descriptions</li>
-                    <li>Work information</li>
-                    <li>Containment information</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-
-        <!-- ANGELA -->
-        <section id="angela" class="page-section hidden">
-
-            <div class="header">
-
-                <p>FACILITY SYSTEM / AI</p>
-
-                <h1>ANGELA</h1>
-
-            </div>
-
-
-            <div class="angela-box">
-
-                <div class="angela-header">
-
-                    <h2>ANGELA</h2>
-
-                    <span>FACILITY AI</span>
-
-                </div>
-
-
-                <div id="angelaMessages" class="angela-messages">
-
-                    <div class="angela-message">
-
-                        <strong>ANGELA:</strong>
-
-                        <p>
-                            Welcome, Manager.
-                        </p>
-
-                        <p>
-                            How may I assist you today?
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="angela-input">
-
-                    <input
-                        type="text"
-                        id="angelaInput"
-                        placeholder="Enter a message..."
-                        onkeydown="handleAngelaInput(event)"
-                    >
-
-                    <button onclick="talkToAngela()">
-                        SEND
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
+        </footer>
 
     </main>
 
 
+
+    <!-- =========================
+         RECORD MODAL
+    ========================== -->
+    <div id="recordModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                onclick="closeDetails()">
+
+                ×
+
+            </button>
+
+            <p class="classification">
+                CLASSIFIED RECORD
+            </p>
+
+            <h2 id="modalName">
+                Abnormality
+            </h2>
+
+            <div class="modal-details">
+
+                <p>
+                    <strong>RECORD ID:</strong>
+                    <span id="modalCode"></span>
+                </p>
+
+                <p>
+                    <strong>RISK LEVEL:</strong>
+                    <span id="modalRisk"></span>
+                </p>
+
+                <p>
+                    <strong>STATUS:</strong>
+                    ARCHIVED
+                </p>
+
+            </div>
+
+            <div class="modal-description">
+
+                <h3>
+                    RECORD DESCRIPTION
+                </h3>
+
+                <p id="modalDescription"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
