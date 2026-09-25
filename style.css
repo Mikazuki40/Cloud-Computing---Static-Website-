@@ -1,0 +1,501 @@
+/* ------------------------------
+   GENERAL
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #111111;
+    color: #dddddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------------------
+   SIDEBAR
+------------------------------ */
+
+.sidebar {
+    position: fixed;
+
+    width: 240px;
+    height: 100vh;
+
+    background-color: #171717;
+
+    border-right: 2px solid #444444;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    margin: 0;
+
+    font-size: 25px;
+
+    color: #eeeeee;
+}
+
+.logo h2 {
+    margin: 0;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #999999;
+}
+
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.sidebar nav a {
+    padding: 15px;
+
+    text-decoration: none;
+
+    color: #bbbbbb;
+
+    border-left: 3px solid transparent;
+}
+
+.sidebar nav a:hover {
+    background-color: #252525;
+
+    color: white;
+
+    border-left: 3px solid #cccccc;
+}
+
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+.sidebar-bottom p {
+    color: #777777;
+}
+
+.status-online {
+    color: #aaaaaa;
+}
+
+
+/* ------------------------------
+   MAIN CONTENT
+------------------------------ */
+
+.main-content {
+    margin-left: 240px;
+
+    min-height: 100vh;
+
+    padding: 40px;
+}
+
+
+.page-section {
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+.header {
+    border-bottom: 1px solid #555555;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+}
+
+.header p {
+    color: #777777;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    margin: 5px 0 0;
+
+    font-size: 38px;
+
+    letter-spacing: 3px;
+
+    color: #eeeeee;
+}
+
+
+/* ------------------------------
+   WARNING
+------------------------------ */
+
+.warning-box {
+    border: 1px solid #777777;
+
+    background-color: #1c1c1c;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+}
+
+.warning-box h2 {
+    color: #eeeeee;
+}
+
+
+/* ------------------------------
+   WELCOME
+------------------------------ */
+
+.welcome {
+    background-color: #191919;
+
+    border: 1px solid #444444;
+
+    padding: 30px;
+}
+
+.welcome h2 {
+    color: #eeeeee;
+}
+
+.welcome p {
+    line-height: 1.7;
+
+    color: #aaaaaa;
+}
+
+
+button {
+    background-color: #dddddd;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #aaaaaa;
+}
+
+
+/* ------------------------------
+   SEARCH
+------------------------------ */
+
+.search-container {
+    margin-bottom: 25px;
+}
+
+.search-container input {
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: #1c1c1c;
+
+    border: 1px solid #555555;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+/* ------------------------------
+   ABNORMALITY GRID
+------------------------------ */
+
+.abnormality-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 20px;
+}
+
+
+.abnormality-card {
+    background-color: #191919;
+
+    border: 1px solid #444444;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+.abnormality-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #999999;
+}
+
+
+.abnormality-card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    background-color: #222222;
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 20px;
+
+    color: #eeeeee;
+}
+
+.card-content p {
+    color: #777777;
+}
+
+
+.card-content a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #cccccc;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #777777;
+}
+
+
+/* ------------------------------
+   RISK LEVELS
+------------------------------ */
+
+.risk {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    border: 1px solid #777777;
+}
+
+.zayin {
+    background-color: #222222;
+}
+
+.teth {
+    background-color: #292929;
+}
+
+.he {
+    background-color: #333333;
+}
+
+.waw {
+    background-color: #3b3b3b;
+}
+
+.aleph {
+    background-color: #444444;
+}
+
+
+/* ------------------------------
+   INFORMATION
+------------------------------ */
+
+.information-box {
+    background-color: #191919;
+
+    border: 1px solid #444444;
+
+    padding: 30px;
+
+    line-height: 1.7;
+}
+
+.information-box h2 {
+    color: #eeeeee;
+
+    border-bottom: 1px solid #444444;
+
+    padding-bottom: 10px;
+}
+
+
+/* ------------------------------
+   ANGELA
+------------------------------ */
+
+.angela-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    border: 1px solid #555555;
+
+    background-color: #181818;
+}
+
+
+.angela-header {
+    padding: 20px;
+
+    border-bottom: 1px solid #555555;
+}
+
+.angela-header h2 {
+    margin: 0;
+}
+
+.angela-header span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.angela-messages {
+    min-height: 350px;
+
+    padding: 25px;
+}
+
+
+.angela-message {
+    border-left: 3px solid #777777;
+
+    padding-left: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.angela-message strong {
+    color: #eeeeee;
+}
+
+
+.angela-message p {
+    color: #aaaaaa;
+
+    line-height: 1.6;
+}
+
+
+.angela-input {
+    display: flex;
+
+    border-top: 1px solid #444444;
+}
+
+.angela-input input {
+    flex: 1;
+
+    padding: 15px;
+
+    background-color: #111111;
+
+    color: white;
+
+    border: none;
+
+    outline: none;
+}
+
+.angela-input button {
+    border-radius: 0;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        border-right: none;
+
+        border-bottom: 2px solid #444444;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+}

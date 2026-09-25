@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lobotomy Corporation | Abnormality Archive</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h1>LOBOTOMY</h1>
+            <h2>CORPORATION</h2>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#abnormalities">Abnormalities</a>
+            <a href="#about">About</a>
+            <a href="#angela">Angela</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>FACILITY STATUS</p>
+            <span class="status-online">● ONLINE</span>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- HOME -->
+        <section id="home" class="page-section">
+
+            <div class="header">
+                <p>LOBOTOMY CORPORATION DATABASE</p>
+                <h1>ABNORMALITY ARCHIVE</h1>
+            </div>
+
+            <div class="warning-box">
+
+                <h2>⚠ WARNING</h2>
+
+                <p>
+                    This database contains classified information
+                    regarding Abnormalities contained within the facility.
+                </p>
+
+                <p>
+                    Unauthorized access to classified information
+                    may result in disciplinary action.
+                </p>
+
+            </div>
+
+
+            <div class="welcome">
+
+                <h2>Welcome, Manager.</h2>
+
+                <p>
+                    This archive contains information regarding
+                    Abnormalities encountered by Lobotomy Corporation.
+                </p>
+
+                <p>
+                    Select an Abnormality from the archive to
+                    inspect its recorded information.
+                </p>
+
+                <button onclick="showSection('abnormalities')">
+                    OPEN ARCHIVE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABNORMALITY LIST -->
+        <section id="abnormalities" class="page-section hidden">
+
+            <div class="header">
+
+                <p>DATABASE / ARCHIVE</p>
+
+                <h1>ABNORMALITY LIST</h1>
+
+            </div>
+
+
+            <!-- Search -->
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Abnormalities..."
+                    onkeyup="searchAbnormalities()"
+                >
+
+            </div>
+
+
+            <!-- Abnormality Cards -->
+            <div class="abnormality-grid" id="abnormalityList">
+
+
+                <!-- One Sin -->
+                <div
+                    class="abnormality-card"
+                    data-name="one sin and hundreds of good deeds"
+                >
+
+                    <img
+                        src="images/one-sin.jpg"
+                        alt="One Sin and Hundreds of Good Deeds"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="risk zayin">
+                            ZAYIN
+                        </span>
+
+                        <h2>
+                            One Sin and Hundreds of Good Deeds
+                        </h2>
+
+                        <p>
+                            O-03-03
+                        </p>
+
+                        <a href="abnormalities/one-sin.html">
+                            VIEW RECORD
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fairy Festival -->
+                <div
+                    class="abnormality-card"
+                    data-name="fairy festival"
+                >
+
+                    <img
+                        src="images/fairy-festival.jpg"
+                        alt="Fairy Festival"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="risk teth">
+                            TETH
+                        </span>
+
+                        <h2>
+                            Fairy Festival
+                        </h2>
+
+                        <p>
+                            F-04-83
+                        </p>
+
+                        <a href="abnormalities/fairy-festival.html">
+                            VIEW RECORD
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Old Lady -->
+                <div
+                    class="abnormality-card"
+                    data-name="old lady"
+                >
+
+                    <img
+                        src="images/old-lady.jpg"
+                        alt="Old Lady"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="risk teth">
+                            TETH
+                        </span>
+
+                        <h2>
+                            Old Lady
+                        </h2>
+
+                        <p>
+                            O-01-12
+                        </p>
+
+                        <a href="abnormalities/old-lady.html">
+                            VIEW RECORD
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Forsaken Murderer -->
+                <div
+                    class="abnormality-card"
+                    data-name="forsaken murderer"
+                >
+
+                    <img
+                        src="images/forsaken-murderer.jpg"
+                        alt="Forsaken Murderer"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="risk teth">
+                            TETH
+                        </span>
+
+                        <h2>
+                            Forsaken Murderer
+                        </h2>
+
+                        <p>
+                            T-01-54
+                        </p>
+
+                        <a href="abnormalities/forsaken-murderer.html">
+                            VIEW RECORD
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mountain -->
+                <div
+                    class="abnormality-card"
+                    data-name="mountain of smiling bodies"
+                >
+
+                    <img
+                        src="images/mountain-corps.jpg"
+                        alt="The Mountain of Smiling Bodies"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="risk waw">
+                            WAW
+                        </span>
+
+                        <h2>
+                            The Mountain of Smiling Bodies
+                        </h2>
+
+                        <p>
+                            O-04-102
+                        </p>
+
+                        <a href="abnormalities/mountain-corps.html">
+                            VIEW RECORD
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="page-section hidden">
+
+            <div class="header">
+
+                <p>DATABASE / INFORMATION</p>
+
+                <h1>ABOUT THE ARCHIVE</h1>
+
+            </div>
+
+            <div class="information-box">
+
+                <h2>Abnormality Archive</h2>
+
+                <p>
+                    The Abnormality Archive is a fan-made website
+                    inspired by Lobotomy Corporation.
+                </p>
+
+                <p>
+                    Its purpose is to organize information about
+                    Abnormalities into an accessible digital archive.
+                </p>
+
+                <h2>Archive Information</h2>
+
+                <ul>
+                    <li>Abnormality identification numbers</li>
+                    <li>Risk levels</li>
+                    <li>Basic descriptions</li>
+                    <li>Work information</li>
+                    <li>Containment information</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANGELA -->
+        <section id="angela" class="page-section hidden">
+
+            <div class="header">
+
+                <p>FACILITY SYSTEM / AI</p>
+
+                <h1>ANGELA</h1>
+
+            </div>
+
+
+            <div class="angela-box">
+
+                <div class="angela-header">
+
+                    <h2>ANGELA</h2>
+
+                    <span>FACILITY AI</span>
+
+                </div>
+
+
+                <div id="angelaMessages" class="angela-messages">
+
+                    <div class="angela-message">
+
+                        <strong>ANGELA:</strong>
+
+                        <p>
+                            Welcome, Manager.
+                        </p>
+
+                        <p>
+                            How may I assist you today?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="angela-input">
+
+                    <input
+                        type="text"
+                        id="angelaInput"
+                        placeholder="Enter a message..."
+                        onkeydown="handleAngelaInput(event)"
+                    >
+
+                    <button onclick="talkToAngela()">
+                        SEND
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
